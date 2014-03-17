@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-US" class="en-US">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-language" content="en-US">
+    <title>Image Scrubber Demo (Ukiyo-e.org)</title>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="jquery.imgscrubber-array.js"></script>
+
+    <style>
+    body {
+        font-family: Helvetica, Arial;
+    }
+    h2, div.row {
+        clear: both;
+        overflow: auto;
+        margin: 20px 0;
+    }
+    div.img {
+        float: left;
+        position: relative;
+        margin: 5px;
+    }
+    div.img .details {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        overflow: hidden;
+        color: #FFF;
+    }
+    div.img .details .wrap {
+        margin: 3px;
+        position: relative;
+        z-index: 2;
+    }
+    div.img .details a {
+        color: #FFF;
+    }
+    .scrubber .loading-bar {
+        background: rgba(90, 200, 200, 0.8);
+        width: 0%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+    }
+    .photo-container {
+      position:relative;
+      width: 400px;
+      max-height: 250px;
+      overflow: hidden;  
+      position: relative;
+    }
+
+    img.medium {
+      position:relative;
+      width: 100%;
+    }
+    </style>
+    <script>
+    $(document).imgScrubber({
+        delegate: "div.img"
+    });
+    </script>
+</head>
+<body style="">
+
+<h1>jQuery Image Scrubber Demo Page</h1>
+
+<p>This example uses an existing array of images, as demonstrated in <a href="http://localist.herokuapp.com">this application</a>.</p>
+
+    <h3>Radegast Hall & Biergarten</h3>
+    <div class="row">
+        <div class="photo-container img scrubber">
+            <img src="https://lh3.googleusercontent.com/-BMKDWlRfY9Q/TyFArkab82I/AAAAAAAAAD8/3UxYkaX4J8Q/w800-h800-s0/DSC_5750.jpg" class="medium">
+            <div class="photoarray" data-photos="[&quot;https://lh5.googleusercontent.com/-aNbNJ8LIaKI/TyFAvLhTOlI/AAAAAAAAAEI/5kPxZrSI5Eo/w800-h800-s0/DSC_5764.jpg&quot;, &quot;https://lh3.googleusercontent.com/-ZYgjnL-NLDg/TyFAruZTj4I/AAAAAAAAAEA/YciPFHzS6MU/w800-h800-s0/DSC_5638.jpg&quot;, &quot;https://lh3.googleusercontent.com/-osa6NmI-wZk/TyFAt6kuqbI/AAAAAAAAAEE/bTxCam8STMY/w800-h800-s0/DSC_5830.jpg&quot;, &quot;https://lh4.googleusercontent.com/-VV68CxmE3p4/TxWgnXg5M5I/AAAAAAAAADk/KGYUYwTIIJ4/w800-h800-s0/OCT185.jpg&quot;, &quot;https://lh3.googleusercontent.com/-BMKDWlRfY9Q/TyFArkab82I/AAAAAAAAAD8/3UxYkaX4J8Q/w800-h800-s0/DSC_5750.jpg&quot;, &quot;https://lh3.googleusercontent.com/-flS_IMOkL68/TxWgm1eyR9I/AAAAAAAAADg/jV4Ixsm-hUU/w800-h800-s0/OCT051.jpg&quot;, &quot;https://lh4.googleusercontent.com/-eETr1oTu0dw/Uolyn2QvBzI/AAAAAAAAfAE/6eoWjuxkmbw/w800-h800-s0/IMG_20131116_214238.jpg&quot;, &quot;https://lh4.googleusercontent.com/-3O7C-rGloCM/UbxwVSuyQUI/AAAAAAAAT6o/nlTsBbp4GAY/w800-h800-s0/Photo%2BOct%2B28%252C%2B3%2B55%2B10%2BPM.jpg&quot;, &quot;https://lh4.googleusercontent.com/-YGKeNJZtHKg/TyFArDpaa6I/AAAAAAAAAD4/TTNBk9HwyB4/w800-h800-s0/DSC_5752.jpg&quot;, &quot;https://lh6.googleusercontent.com/-Gq5J3WyX9-Y/TxWgtYDTL1I/AAAAAAAAADw/BAEpPo1ZZL8/w800-h800-s0/OCT221.jpg&quot;]">  </div>
+            <div class="details">
+                <div class="wrap"> 10 photos </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Saxon + Parole</h3>
+    <div class="row">
+        <div class="photo-container img scrubber">
+            <img src="https://lh4.googleusercontent.com/-cHM15HAmiWE/UFqOTF8tRvI/AAAAAAAAFY8/9Nzk5iga9Ik/w800-h800/saxonandparole_NYC%2B%252835%2529.JPG" class="medium">
+            <div class="photoarray" data-photos="[&quot;https://lh5.googleusercontent.com/-hNgzBtLr24U/UkY1vtKIZOI/AAAAAAAAJK4/ZbvzKU9e8Zc/w800-h800-s0/photo.jpg&quot;, &quot;https://lh5.googleusercontent.com/-xZC7P26lqwk/UkY1sJOaCII/AAAAAAAAJKo/Dpcloi5Oeqg/w800-h800-s0/photo.jpg&quot;, &quot;https://lh5.googleusercontent.com/-L1aeCb1I0gI/UkY1t-Xrm8I/AAAAAAAAJKw/zKODmY9fg5w/w800-h800-s0/photo.jpg&quot;, &quot;https://lh3.googleusercontent.com/-xGhsLwaZvao/UkY1xvNSUVI/AAAAAAAAJLA/Vwcg2Zim3ms/w800-h800-s0/photo.jpg&quot;, &quot;https://lh3.googleusercontent.com/-6NEgvgN8LfM/UFqOKcebECI/AAAAAAAAFVg/Xi1O5u5qaZU/w800-h800/saxonandparole_NYC%2B%252816%2529.JPG&quot;, &quot;https://lh5.googleusercontent.com/-jJ1cxspPU5E/UFqOH0xL6gI/AAAAAAAAFU0/vNC_biM7oys/w800-h800/saxonandparole.jpg&quot;, &quot;https://lh4.googleusercontent.com/-cHM15HAmiWE/UFqOTF8tRvI/AAAAAAAAFY8/9Nzk5iga9Ik/w800-h800/saxonandparole_NYC%2B%252835%2529.JPG&quot;, &quot;https://lh5.googleusercontent.com/-5dnhOuwL00k/UwDytCLUwUI/AAAAAAAA8cM/WlFWV1G4rpE/w800-h800-s0/2014-02-16&quot;, &quot;https://lh3.googleusercontent.com/-UbaVG_-ws3o/UVyPr-wfCII/AAAAAAABcs8/2wzdCn2uVak/w800-h800-s0/saxonparole-1001.jpg&quot;, &quot;https://lh3.googleusercontent.com/-rcc-QQYd73I/UMAN6dC1RLI/AAAAAAAAh44/g17qfGGyICs/w800-h800-s0/2012-12-05&quot;]">  </div>
+            <div class="details">
+                <div class="wrap"> 10 photos </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Spice Market</h3>
+    <div class="row">
+        <div class="photo-container img scrubber">
+            <img src="https://lh4.googleusercontent.com/-7ujH0LdHjn0/Up_Tx4dVGXI/AAAAAAAATSg/pyGWlTkEeMw/w800-h800-s0/photo.jpg" class="medium">
+            <div class="photoarray" data-photos="[&quot;https://lh4.googleusercontent.com/-7ujH0LdHjn0/Up_Tx4dVGXI/AAAAAAAATSg/pyGWlTkEeMw/w800-h800-s0/photo.jpg&quot;, &quot;https://lh5.googleusercontent.com/-5y42LkVeFDU/Up_TzgiHWBI/AAAAAAAATSo/hY6GVL9qrPQ/w800-h800-s0/photo.jpg&quot;, &quot;https://lh3.googleusercontent.com/-sO7ygN1ZRRM/Up_T5Wr-gpI/AAAAAAAATTA/8hwiLfDtKbs/w800-h800-s0/photo.jpg&quot;, &quot;https://lh6.googleusercontent.com/-8UhHiDBVXk4/Up_T3YfphiI/AAAAAAAATS4/Jst8JU4uehs/w800-h800-s0/photo.jpg&quot;, &quot;https://lh4.googleusercontent.com/-98JEM8hRNZQ/Up_T1k7mObI/AAAAAAAATSw/6J0UWR8rwxs/w800-h800-s0/photo.jpg&quot;, &quot;https://lh3.googleusercontent.com/-UnXnz4NE5J0/Up_TwalmNbI/AAAAAAAATSY/gmx1Wnw4DkQ/w800-h800-s0/photo.jpg&quot;, &quot;https://lh5.googleusercontent.com/-EMWCptBFDyk/UvBh7g4CVtI/AAAAAAAHztQ/fWpoUZtY0pk/w800-h800-s0/photo.jpg&quot;, &quot;https://lh5.googleusercontent.com/-m22zJ2nPZsQ/UvBh8rSCY-I/AAAAAAAHztY/z6yLVf7YKgs/w800-h800-s0/photo.jpg&quot;, &quot;https://lh3.googleusercontent.com/-mgM_oZZoW0s/UvBh8yQXlQI/AAAAAAAHztc/iCP3AfbDrps/w800-h800-s0/photo.jpg&quot;, &quot;https://lh6.googleusercontent.com/-Z8TbyPI6618/UvBh9TOcW4I/AAAAAAAHztg/lP0F0mSqVog/w800-h800-s0/photo.jpg&quot;]"> </div>
+            <div class="details">
+                <div class="wrap"> 10 photos </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
